@@ -206,15 +206,15 @@ If we can solve it for Twitter, we can probably generalize this to
 work for _partial_ exodus of influencers from other platforms like
 Facebook and Instagram.
 
-Please note that Twitter and company won't go away any time soon.
-This is a [cave-and-commons][] setup. The large global social networks
+Please note that Twitter and company will be fine and won't go away any time soon.
+This is a [cave-and-commons][] approach. The large global social networks
 will likely persist for some time as "commons" where you recruit
-members, but these "caves" off to the side with individual communities
+members, but these "caves" off to the side with individual influencer-led communities
 will thrive.
 
 Finally, as noted above, companies like Buffer that solve seemingly simple problems 
 like this have gotten to $20M+ in ARR. If you can build and maintain a tool that reliably exports
-a large percentage of follower emails from Twitter and other social networks, with the consent of the users and at a reasonable price, you have something that a large number of influencers will pay for.
+a large percentage of follower emails from Twitter and other social networks, with the consent of the users and at a reasonable price, you have something that a large number of influencers will likely pay for.
 
 
 [Substack]: https://substack.com
