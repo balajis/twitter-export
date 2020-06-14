@@ -1,19 +1,20 @@
-# Exodus
+# A $7850 BTC Bounty for an open source tool to export your Twitter followers
 
-People have crowdfunded a [$5000+ bounty][bounty] for an open source
+People have crowdfunded a [$7850+ bounty](#bounty-commits) for an open source
 tool that helps influencers export their followers from Twitter to
 [Substack][], [Ghost][], [Locals][], or other user-controlled
 platforms.
 
-Read on for the problem description and possible solutions. Submit
-your example code [here][issue].
-
+ - Read on for the problem description and possible solutions. 
+ - Submit your bounty entry [here][issue].
+ 
 Because this is desired by many people, a good solution to this bounty
 could become a product or even a startup. You'd want to first get it
 to work robustly for Twitter influencers, probably via white glove
 service for the first 100 or so accounts. And then make it work for
 other social platforms. Companies like [Buffer][] have done
-surprisingly well with similar seemingly simple products.
+surprisingly well ($20M+ ARR!) with similar seemingly simple 
+products that fill a hole in the social networking landscape.
 
 # Problem: exporting followers from Twitter
 
@@ -24,13 +25,13 @@ accomplished.
 However, it has several downsides for users with large follower bases,
 as it lacks tools for:
 
-  - distribution: you can't contact all of your followers without permission from Twitter
-  - customization: you can't customize the experience for your followers or offer them added benefits
-  - monetization: you don't make money as a Twitter influencer, and don't get a storefront to sell things
-  - moderation: you can't maintain a civil tone among your community
-  - information: you don't have individual-level search and analytics on your follower base
-  - prioritization: you can't up- or down-regulate what appears in your feed or that of your followers
-  - brand management: you don't control your own brand or domain name, as it's twitter.com/example rather than example.com
+  - **distribution**: you can't contact all of your followers without permission from Twitter
+  - **customization**: you can't customize the experience for your followers or offer them added benefits
+  - **monetization**: you don't make money as a Twitter influencer, and don't get a storefront to sell things
+  - **moderation**: you can't maintain a civil tone among your community
+  - **information**: you don't have individual-level search and analytics on your follower base
+  - **prioritization**: you can't up- or down-regulate what appears in your feed or that of your followers
+  - **brand management**: you don't control your own brand or domain name, as it's twitter.com/example rather than example.com
 
 For these reasons and more, many people are moving to platforms like
 [Substack][], [Ghost][], [Locals][], or the like. In these platforms,
@@ -77,20 +78,33 @@ overlapping ways to export your userbase to example.com/subscribe.
 
 None of these are perfect. But the last one seems like it has the
 right balance of being reasonable (a single DM to someone who has
-chosen to follow you is not unreasonable) and in theory relatively easy to
+chosen to follow you should be OK) and in theory relatively easy to
 automate.
 
 In particular, Twitter has a bunch of tools for corporations to do
 customer service [via DM][dm-api] that might be repurposed for this use case.
 
-## Bounty: $5000 bounty for open source mass DM tool
+## Bounty: $7850 bounty for open source mass DM tool
 
-Here is a [thread][first-thread] with context on the initial
-bounty.
+Here is a [thread][first-thread] with context on the initial $1000 bounty by @balajis.
 
-### Bounty logistics
-Enough other people were interested in this that the bounty
-rose to [$4350][bounty-increase] and then above $5000 quickly.
+![image](https://user-images.githubusercontent.com/10866/84595515-26623680-ae0d-11ea-8fd0-3930db5094e1.png)
+![image](https://user-images.githubusercontent.com/10866/84595535-3da12400-ae0d-11ea-8f48-89362447ac52.png)
+
+### Bounty Commits
+Enough other people were interested in this that the bounty is now $7850 as of Sunday June 14, 2020.
+
+- [$1000 from @balajis](https://twitter.com/balajis/status/1271945241881268224)
+- [$1000 from @ameensol](https://twitter.com/SpankChain/status/1271949898548514816)
+- [$1000 from @shervin](https://twitter.com/shervin/status/1272166171924557824)
+- [$1000 from @maxua](https://twitter.com/maxua/status/1272040978816339968)
+- [$500 from @seanlinehan](https://twitter.com/seanlinehan/status/1271951229602590720)
+- [$500 from @stevecarrera](https://twitter.com/stevecarrera/status/1272167907447861249)
+- [$200 from @kiko_himself](https://twitter.com/kiko_himself/status/1271972879337435138)
+- [$150 from @deconstructized](https://twitter.com/deconstructized/status/1271949110271021056)
+- $1000 from anon1
+- $1000 from anon2
+- $500 from anon3
 
 In terms of mechanics, I (@balajis) will decide on the winner by June
 21, 2020, and then the BTC address of the winner will be provided to
@@ -111,8 +125,8 @@ that it works.
 As noted above, the ideal is that if you have N followers, you get a list of
 N emails (or phone numbers) for those followers _with their explicit
 consent_ to contact them on another platform, and without bothering
-them very much or at all, or requiring too much time on the part
-of the influencer to run or maintain a script
+them very much or at all, or requiring too much time or money on the part
+of the influencer.
 
 If you can achieve this goal another way, that's fine.
 
@@ -122,7 +136,7 @@ breaks on accounts with many followers, or gets an account banned or shadowbanne
 or has some other serious negative side effect, then you don't have a solution.
 
 ## Can the tool run for multiple days?
-Yes, Twitter's default API has a 1000-daily-DM limit. So your tool might need to run
+Yes, Twitter's default API has a [1000-daily-DM limit][dm-limits]. So your tool might need to run
 for multiple days.
 
 The open source version would run locally and have some state, like a
@@ -189,9 +203,11 @@ will likely persist for some time as "commons" where you recruit
 members, but these "caves" off to the side with individual communities
 will thrive.
 
+Finally, as noted above, companies like Buffer that solve seemingly simple problems 
+like this have gotten to $20M+ in ARR. If you can build and maintain a tool that reliably exports
+a large percentage of follower emails from Twitter and other social networks, with the consent of the users and at a reasonable price, you have something that a large number of influencers will pay for.
 
 
-# References
 [Substack]: https://substack.com
 [Ghost]: https://ghost.org
 [Locals]: https://locals.com
@@ -208,3 +224,4 @@ will thrive.
 [dm-api]: https://developer.twitter.com/en/products/direct-messages
 [Buffer]: https://buffer.com/press/buffer-expands-brand-building
 [cave-and-commons]: https://hbr.org/2013/03/give-workers-the-power-to-choose-cave
+[dm-limits]: https://developer.twitter.com/en/docs/basics/rate-limits
