@@ -111,10 +111,12 @@ If more money comes in beyond $10,000, we will allocate the first $10,000 to the
 - [$2000 from @richardheartwin](https://twitter.com/RichardHeartWin/status/1272195436766474242)
 - [$100 from @allenday](https://twitter.com/allenday/status/1272192331458867202)
 - [$150 from @paulyacoubian](https://twitter.com/PaulYacoubian/status/1272193951273975809)
+- [$250 from @zosegal](https://twitter.com/zosegal/status/1272261575416492032)
 - $1000 from anon1
 - $1000 from anon2
 - $500 from anon3
 - $500 from anon4
+- $1000 from anon5
 
 ## Bounty Logistics
 
