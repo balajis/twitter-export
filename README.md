@@ -79,10 +79,14 @@ overlapping ways to export your userbase to example.com/subscribe.
 None of these are perfect. But the last one seems like it has the
 right balance of being reasonable (a single DM to someone who has
 chosen to follow you should be OK) and in theory relatively easy to
-automate.
-
-In particular, Twitter has a bunch of tools for corporations to do
+automate. Call this the mass DM approach. In particular, Twitter has a bunch of tools for corporations to do
 customer service [via DM][dm-api] that might be repurposed for this use case.
+
+## The mass DM approach
+
+The simplest solution for the mass DM approach might be a command line app that takes as input a Twitter API key and a message to send each user. It gives you a preview of all of your followers, gives you some options to rank them by importance, and lets you try it out by sending test messages to a few accounts before opening it up to message 1000 accounts per day. It stores state so you know who you messaged in the past, such that you don't inadvertently recontact them.
+
+You can imagine a fancier local Mac App that puts a nice GUI on top of the command line engine described above. Or an even fancier hosted version with individually attributable conversion links, so you know which usernames converted to which emails. The hosted version would also allow you to keep running the 1000 DMs per day in the background, so it could be a SaaS service.
 
 # Bounty: $7850 bounty for open source mass DM tool
 
@@ -91,7 +95,7 @@ Here is a [thread][first-thread] with context on the initial $1000 bounty by @ba
 ![image](https://user-images.githubusercontent.com/10866/84595515-26623680-ae0d-11ea-8fd0-3930db5094e1.png)
 ![image](https://user-images.githubusercontent.com/10866/84595535-3da12400-ae0d-11ea-8f48-89362447ac52.png)
 
-### Bounty Commits
+## Bounty Commits
 Enough other people were interested in this that the bounty is now $7850 as of Sunday June 14, 2020.
 
 - [$1000 from @balajis](https://twitter.com/balajis/status/1271945241881268224)
