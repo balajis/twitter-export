@@ -1,7 +1,7 @@
 # A $7850 BTC Bounty for an open source tool to export your Twitter followers
 
 People have crowdfunded a [$7850+ bounty](#bounty-commits) for an open source
-tool that helps influencers export their followers from Twitter to
+tool that helps people export their followers from Twitter to
 [Substack][], [Ghost][], [Locals][], or other user-controlled
 platforms.
 
@@ -84,7 +84,7 @@ automate.
 In particular, Twitter has a bunch of tools for corporations to do
 customer service [via DM][dm-api] that might be repurposed for this use case.
 
-## Bounty: $7850 bounty for open source mass DM tool
+# Bounty: $7850 bounty for open source mass DM tool
 
 Here is a [thread][first-thread] with context on the initial $1000 bounty by @balajis.
 
@@ -105,6 +105,8 @@ Enough other people were interested in this that the bounty is now $7850 as of S
 - $1000 from anon1
 - $1000 from anon2
 - $500 from anon3
+
+## Bounty Logistics
 
 In terms of mechanics, I (@balajis) will decide on the winner by June
 21, 2020, and then the BTC address of the winner will be provided to
@@ -134,6 +136,9 @@ If you can achieve this goal another way, that's fine.
 These are a critical constraint. If you have a solution that works in theory, but that
 breaks on accounts with many followers, or gets an account banned or shadowbanned for spam,
 or has some other serious negative side effect, then you don't have a solution.
+
+## What do you mean by ranking followers?
+Because you can only send 1000 DMs per day, you will want to prioritize your followers such that you export the most important ones first. These might be the ones who have the most followers themselves, or who have some attribute in their bio (like a #Bitcoin hashtag), or that have some other criteria. In practice this means that you'll likely want a _follower table_, where the first column is the Twitter username and subsequent columns are metadata on that username (along with a timestamp for when that metadata was last collected, as it can become stale as people update their profiles).
 
 ## Can the tool run for multiple days?
 Yes, Twitter's default API has a [1000-daily-DM limit][dm-limits]. So your tool might need to run
