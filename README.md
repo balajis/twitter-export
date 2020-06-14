@@ -1,6 +1,6 @@
-# A $7850 BTC Bounty for an open source tool to export your Twitter followers
+# A $10000 BTC Bounty for an open source tool to export your Twitter followers
 
-People have crowdfunded a [$7850+ bounty](#bounty-commits) for an open source
+People have crowdfunded a [$10000 bounty](#bounty-commits), payable in BTC, for an open source
 tool that helps people export their followers from Twitter to
 [Substack][], [Ghost][], [Locals][], or other user-controlled
 platforms.
@@ -88,7 +88,7 @@ The simplest solution for the mass DM approach might be a command line app that 
 
 You can imagine a fancier local Mac App that puts a nice GUI on top of the command line engine described above. Or an even fancier hosted version with individually attributable conversion links, so you know which usernames converted to which emails. The hosted version would also allow you to keep running the 1000 DMs per day in the background, so it could be a SaaS service.
 
-# Bounty: $7850 bounty for open source mass DM tool
+# Bounty: $10000 bounty for open source mass DM tool
 
 Here is a [thread][first-thread] with context on the initial $1000 bounty by @balajis.
 
@@ -96,7 +96,9 @@ Here is a [thread][first-thread] with context on the initial $1000 bounty by @ba
 ![image](https://user-images.githubusercontent.com/10866/84595535-3da12400-ae0d-11ea-8f48-89362447ac52.png)
 
 ## Bounty Commits
-Enough other people were interested in this that the bounty is now $7850 as of Sunday June 14, 2020.
+Enough other people were interested in this that the total bounty funds are now >$10000 as of Sunday June 14, 2020! 
+
+If more money comes in beyond $10,000, we will allocate the first $10,000 to the winner. We'll then allocate remaining monies to folks who test out the app and/or possibly to second and third place submissions.
 
 - [$1000 from @balajis](https://twitter.com/balajis/status/1271945241881268224)
 - [$1000 from @ameensol](https://twitter.com/SpankChain/status/1271949898548514816)
@@ -106,9 +108,13 @@ Enough other people were interested in this that the bounty is now $7850 as of S
 - [$500 from @stevecarrera](https://twitter.com/stevecarrera/status/1272167907447861249)
 - [$200 from @kiko_himself](https://twitter.com/kiko_himself/status/1271972879337435138)
 - [$150 from @deconstructized](https://twitter.com/deconstructized/status/1271949110271021056)
+- [$2000 from @richardheartwin](https://twitter.com/RichardHeartWin/status/1272195436766474242)
+- [$100 from @allenday](https://twitter.com/allenday/status/1272192331458867202)
+- [$150 from @paulyacoubian](https://twitter.com/PaulYacoubian/status/1272193951273975809)
 - $1000 from anon1
 - $1000 from anon2
 - $500 from anon3
+- $500 from anon4
 
 ## Bounty Logistics
 
