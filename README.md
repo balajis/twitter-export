@@ -244,7 +244,8 @@ Assume that the only emails that count are those that are above a
 quality bar, as measured by [kickbox.com][] or a similar set of
 quality filters. It goes without saying (but we're saying it) that all
 users must consent to submitting their emails, ideally via email
-verification.
+verification or demonstrated consent (eg by clicking a link and
+manually submitting their email).
 
 We're open to feedback on this scoring system, but it appears to
 capture the spirit of "export Twitter followers to email" without
