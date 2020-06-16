@@ -293,7 +293,7 @@ confirmation.
 ## How to submit an entry for the bounty?
 Go to this [issue][] and make a comment with a link to
 your project. Ideally it should have a gif or something that shows
-that it works.
+how it works.
 
 ## What about other approaches?
 As noted above, the ideal is that if you have N followers, you get a list of
@@ -330,7 +330,7 @@ including the "[mass DM](#the-mass-dm-approach)" and
 as something creative you might come up with. If you take the mass DM
 approach, here are some answers to FAQs.
 
-## If I do the mass DM approach, can it be command line only?
+### If I do the mass DM approach, can it be command line only?
 That's the simplest version, but ideally there should be a simple Mac
 app and a hosted version as well.
 
@@ -350,7 +350,7 @@ of the nature of what this app is doing (mass DM of followers), the
 influencer will want to carefully babysit it and the presence of the
 open source versions will increase trust in the hosted version.
 
-## Why would ranking followers be important for the mass DM approach?
+### Why would ranking followers be important for the mass DM approach?
 Because you can only send 1000 DMs per day, you will want to
 prioritize your followers such that you export the most important ones
 first. These might be the ones who have the most followers themselves,
@@ -373,7 +373,7 @@ as new followers arise, without requiring the influencer to think
 about whether they are inadvertently messaging people they already
 messaged.
 
-## Can the mass DM tool require something above the basic API?
+### Can the mass DM tool require something above the basic API?
 Maybe, so long as that API access isn't too expensive or time
 consuming to get for the typical Twitter influencer with (say) 10,000
 followers.
