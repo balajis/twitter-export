@@ -186,7 +186,7 @@ Now the influencer incentivizes their audience to refer people.
 - It's a [bit.ly-like](https://bit.ly) URL generator where they can type in their Twitter username to generate an affiliate link
 - So a follower named `foobar` would get an affiliate URL like `socialexporter.com/username?referer=foobar`
 - A user who landed on the site through this affiliate URL and then entered in a quality email would give `foobar` credit on the socialexporter.com leaderboard
-- Anyone can view this leaderboard at socialexporter.com/username/leaderboard to see themselves alongside the top referers for the day for this username, ranked by the number of quality emails they've referred, similar to [pioneer.app](https://pioneer.app/leaderboard#global)
+- Anyone can view this leaderboard at `socialexporter.com/username/leaderboard` to see themselves alongside the top referers for the day for this username, ranked by the number of quality emails they've referred, similar to [pioneer.app](https://pioneer.app/leaderboard#global)
 - Quality can be determined by something like [kickbox.com][] or something more sophisticated, to filter out fake signups
 
 ### Phase 3: Payment
@@ -226,12 +226,16 @@ Here are threads with context on the bounty:
 Please follow [@balajis][] for future updates.
 
 ## Bounty Scoring
-
 As noted above, we are thinking about scoring the different approaches
-by allowing volunteer accounts to try out the top submissions on a
-subset of 1000 followers, and then rating them by conversion
-percentage, cost-per-conversion, ease-of-use, and
-happiness-of-converted-user.
+by doing two passes.
+
+**First pass**: identify promising submissions versus those which are
+obviously buggy by looking at the code, polish, visuals, etc.
+
+**Second pass**: work with volunteer accounts to try out the top
+submissions on a subset of ~1000 followers and rate each submission by
+conversion percentage, cost-per-conversion, ease-of-use, and
+happiness-of-converted-users.
 
 Let's define these terms.
 
@@ -244,12 +248,12 @@ Assume that the only emails that count are those that are above a
 quality bar, as measured by [kickbox.com][] or a similar set of
 quality filters. It goes without saying (but we're saying it) that all
 users must consent to submitting their emails, ideally via email
-verification or demonstrated consent (eg by clicking a link and
-manually submitting their email).
+verification or some other form of demonstrated consent (such as
+clicking a link and manually submitting their email).
 
 We're open to feedback on this scoring system, but it appears to
-capture the spirit of "export Twitter followers to email" without
-being prescriptive on the exact method.
+capture the spirit of "export Twitter followers to an email list"
+without being prescriptive on the exact method.
 
 ## Bounty Commits
 Enough other people were interested in this that the total bounty
