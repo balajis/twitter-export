@@ -312,27 +312,23 @@ These are a critical constraint. If you have a solution that works in theory, bu
 breaks on accounts with many followers, or gets an account banned or shadowbanned for spam,
 or has some other serious negative side effect, then you don't have a solution.
 
-## What do you mean by ranking followers?
-Because you can only send 1000 DMs per day, you will want to prioritize your followers such that you export the most important ones first. These might be the ones who have the most followers themselves, or who have some attribute in their bio (like a #Bitcoin hashtag), or that have some other criteria. In practice this means that you'll likely want a _follower table_, where the first column is the Twitter username and subsequent columns are metadata on that username (along with a timestamp for when that metadata was last collected, as it can become stale as people update their profiles).
+## What about existing tools?
+Here are a few that are relevant:
 
-## Can the tool run for multiple days?
-Yes, Twitter's default API has a [1000-daily-DM limit][dm-limits]. So your tool might need to run
-for multiple days.
+- Example of using Python API to extract followers: [get_followers_bios.py][]
+- Example of getting followers _without_ official API: [Twint][]
+- Command line tool for interacting with Twitter: [t][]
 
-The open source version would run locally and have some state, like a
-SQLite database or a flatfile. It would use that state to record what
-people it had DM’d and when, along with what was said and whether they
-responded. You should also allow re-running of the tool periodically
-as new followers arise, without requiring the influencer to think
-about whether they are inadvertently messaging people they already
-messaged.
+There are tons of open source tools for working with Twitter out there
+on GitHub and the broader internet. Feel free to use them rather than
+reinventing the wheel.
 
-## Can the tool require something above the basic API?
-Maybe, so long as that API access isn't too expensive or time
-consuming to get for the typical Twitter influencer with (say) 10,000
-followers.
-
-The [DM API][dm-api] for customer service seems like it might be quite relevant.
+## Mass DM specific questions
+As noted, there are multiple possible approaches to this problem
+including the "[mass DM](#the-mass-dm-approach)" and
+"[affiliate link](#the-affiliate-link-approach)" approaches, as well
+as something creative you might come up with. If you take the mass DM
+approach, here are some answers to FAQs.
 
 ## If I do the mass DM approach, can it be command line only?
 That's the simplest version, but ideally there should be a simple Mac
@@ -354,16 +350,35 @@ of the nature of what this app is doing (mass DM of followers), the
 influencer will want to carefully babysit it and the presence of the
 open source versions will increase trust in the hosted version.
 
-## What about existing tools?
-Here are a few that are relevant:
+## Why would ranking followers be important for the mass DM approach?
+Because you can only send 1000 DMs per day, you will want to
+prioritize your followers such that you export the most important ones
+first. These might be the ones who have the most followers themselves,
+or who have some attribute in their bio (like a #Bitcoin hashtag), or
+that have some other criteria. In practice this means that you'll
+likely want a _follower table_, where the first column is the Twitter
+username and subsequent columns are metadata on that username (along
+with a timestamp for when that metadata was last collected, as it can
+become stale as people update their profiles).
 
-- Example of using Python API to extract followers: [get_followers_bios.py][]
-- Example of getting followers _without_ official API: [Twint][]
-- Command line tool for interacting with Twitter: [t][]
+### Can the mass DM tool run for multiple days?
+Yes, Twitter's default API has a [1000-daily-DM limit][dm-limits]. So
+your tool might need to run for multiple days.
 
-There are tons of open source tools for working with Twitter out there
-on GitHub and the broader internet. Feel free to use them rather than
-reinventing the wheel.
+The open source version would run locally and have some state, like a
+SQLite database or a flatfile. It would use that state to record what
+people it had DM’d and when, along with what was said and whether they
+responded. You should also allow re-running of the tool periodically
+as new followers arise, without requiring the influencer to think
+about whether they are inadvertently messaging people they already
+messaged.
+
+## Can the mass DM tool require something above the basic API?
+Maybe, so long as that API access isn't too expensive or time
+consuming to get for the typical Twitter influencer with (say) 10,000
+followers.
+
+The [DM API][dm-api] for customer service seems like it might be quite relevant.
 
 # Next steps
 The problem of exporting your following applies to all social media,
