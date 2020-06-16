@@ -240,6 +240,12 @@ Let's define these terms.
  - ease-of-use: self-reported subjective measure by the influencer who set up the product
  - happiness-of-converted-users: self-reported subjective measure by the users referred to the product
 
+Assume that the only emails that count are those that are above a
+quality bar, as measured by [kickbox.com][] or a similar set of
+quality filters. It goes without saying (but we're saying it) that all
+users must consent to submitting their emails, ideally via email
+verification.
+
 We're open to feedback on this scoring system, but it appears to
 capture the spirit of "export Twitter followers to email" without
 being prescriptive on the exact method.
