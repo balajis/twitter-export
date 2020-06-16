@@ -155,15 +155,15 @@ Feel free to modify this.
 Suppose we define three parties: the developer, the influencer who
 wants to export their followers, and each follower themselves.
 
-- The developer sets up a site at (say) socialexporter.com
+- The developer sets up a site at (say) `socialexporter.com`
 - It says EXPORT YOUR FOLLOWERS
 - An influencer lands on this page and logs in with their Twitter account
-- The influencer gets a public page generated for them at socialexporter.com/username
-- The influencer can admin this page at socialexporter.com/username/settings
+- The influencer gets a public page generated for them at `socialexporter.com/username`
+- The influencer can admin this page at `socialexporter.com/username/settings`
 - This public page has some copy asking a user to sign up and explaining where their email will be used (eg Substack, Mailchimp, etc)
 - It also has a small form where a follower can enter their email address
 - After this email address is entered, a second small form is displayed where a follower can optionally generate an affiliate URL (more on that below)
-- And a link appears to socialexporter.com/username/leaderboard, which shows a leaderboard of which followers referred which emails (all zero at the start)
+- And a link appears to `socialexporter.com/username/leaderboard`, which shows a leaderboard of which followers referred which emails (all zero at the start)
 - Separately, when logged in, the influencer sees a different private page with all their followers (kind of like [Social Blade][social-blade-jack])
 - The private page also has a Bitcoin address to deposit funds
 - The influencer sends (say) $1000 to that address to fill up the referral budget
@@ -177,13 +177,13 @@ this action.
 
 Now the influencer incentivizes their audience to refer people.
 
-- The influencer tweets out socialexporter.com/username along with a message
+- The influencer tweets out `socialexporter.com/username` along with a message
 - "Hey, I'm setting up my mailing list. You can sign up here and get paid to refer others: socialexporter.com/username"
-- A Twitter user sees this tweet and visits socialexporter.com/username
+- A Twitter user sees this tweet and visits `socialexporter.com/username`
 - At first they just see copy encouraging them to sign up to the `username` email list and where it will be used (eg Substack, Mailchimp, etc)
 - After they enter their email, they then see a second small form where they can optionally generate an affiliate URL
 - The site may require them to be a follower of `twitter.com/username` for this affiliate link to work, not just a random user
-- It's a bit.ly-like URL generator where they can type in their Twitter username to generate an affiliate link
+- It's a [bit.ly-like](https://bit.ly) URL generator where they can type in their Twitter username to generate an affiliate link
 - So a follower named `foobar` would get an affiliate URL like `socialexporter.com/username?referer=foobar`
 - A user who landed on the site through this affiliate URL and then entered in a quality email would give `foobar` credit on the socialexporter.com leaderboard
 - Anyone can view this leaderboard at socialexporter.com/username/leaderboard to see themselves alongside the top referers for the day for this username, ranked by the number of quality emails they've referred, similar to [pioneer.app](https://pioneer.app/leaderboard#global)
