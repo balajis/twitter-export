@@ -1,20 +1,44 @@
 # A $10000 BTC Bounty for an open source tool to export your Twitter followers
 
-People have crowdfunded a [$10000 bounty](#bounty-commits), payable in BTC, for an open source
-tool that helps people export their followers from Twitter to
-[Substack][], [Ghost][], [Locals][], or other user-controlled
-platforms.
+![Twitter export to email](./img/twitter-to-email.png)
 
- - Read on for the problem description and possible solutions. 
- - Submit your bounty entry [here][issue].
- 
-Because this is desired by many people, a good solution to this bounty
-could become a product or even a startup. You'd want to first get it
-to work robustly for Twitter influencers, probably via white glove
-service for the first 100 or so accounts. And then make it work for
-other social platforms. Companies like [Buffer][] have done
-surprisingly well ($20M+ ARR!) with similar seemingly simple 
-products that fill a hole in the social networking landscape.
+The community has crowdfunded a [$10000 bounty](#bounty-commits),
+payable in BTC, for an open source tool that helps people export their
+followers from Twitter to [Substack][], [Ghost][], [Locals][], or
+other user-controlled platforms.
+
+ - **Submit your bounty entry [here][issue]**
+ - Read on for detailed problem description and possible solutions
+
+The goal is to take a Twitter account with N followers and produce a
+list of N emails (or phone numbers) for those followers _with their
+explicit consent_ to contact them on another platform, and without
+bothering them very much or at all. The ideal solution shouldn't
+take too much time or money on anyone's part.
+
+There are many possible approaches to this problem, and the best one
+will win the first $10k [committed](#bounty-commits). With any
+remaining monies, we'll fund testing and/or second and third place
+prizes.
+
+We care more about the results than the method. We are not going to be
+prescriptive about the best approach to take, though we do suggest two
+possible ideas below, the "[mass DM](#the-mass-dm-approach)" and
+"[affiliate link](#the-affiliate-link-approach)" approaches.
+
+How do we determine the "best" approach? We are thinking about
+[scoring](#bounty-scoring) the different approaches by allowing
+different accounts to try out the top submissions on a subset of 1000
+followers, and then rating them by conversion percentage,
+cost-per-conversion, ease-of-use, and happiness-of-converted-user.
+
+Because a tool like this is desired by many people, a good solution to
+this bounty could become a product or even a startup. You'd want to
+first get it to work robustly for Twitter influencers, probably via
+white glove service for the first 100 or so accounts. And then make it
+work for other social platforms. Companies like [Buffer][] have done
+surprisingly well ($20M+ ARR!) with similar seemingly simple products
+that fill a hole in the social networking landscape.
 
 # Problem: exporting followers from Twitter
 
@@ -36,9 +60,9 @@ as it lacks tools for:
 For these reasons and more, many people are moving to platforms like
 [Substack][], [Ghost][], [Locals][], or the like. In these platforms,
 an influencer has full root privileges over their community and can
-give a richer experience. You don't need to pay Twitter ads to reach
-your followers, or trust that they will deliver your content to their
-feed.
+give a richer experience. You don't need to buy Twitter ads to reach
+your followers, or trust Twitter to deliver your content to your
+followers' feeds.
 
 The issue, however, is that it's not trivial to export a large
 follower base from Twitter!
@@ -49,13 +73,14 @@ supports that. The issue is not the _access_ to your own data, the
 issue is the ability to _contact_ your followers (eg via email or
 phone) without Twitter's additional consent.
 
-# Solution: mass DM with subscribe link?
+# Solution
 
-Here's the ideal: if you have N followers, you get a list of N emails
-(or phone numbers) for those followers _with their explicit consent_
-to contact them on another platform, and without bothering them very
-much or at all. Also, the solution shouldn't take too much time on the
-part of the influencer to run and maintain a script.
+As noted above, the ideal is for an account with N followers to get a
+list of N emails (or phone numbers) for those followers _with their
+explicit consent_ to contact them on another platform, and without
+bothering them very much or at all. In practice, you won't get all N,
+but you may get a subset. Also, the ideal solution shouldn't take too
+much time or money on anyone's part.
 
 In theory, Twitter could add a feature where users could opt in to
 allowing their emails to be viewed by a few, some, or all of the
@@ -75,30 +100,154 @@ overlapping ways to export your userbase to example.com/subscribe.
 6. Parse the bios of each follower account for public contact info (eg if they have their email in their bio), and email them out-of-band with example.com/subscribe
 7. Set up a [welcome message][] with example.com/subscribe for each new follower
 8. Privately DM each follower _once_ with example.com/subscribe
+9. Generate a per-user affiliate referral link, and pay follower to refer others
 
-None of these are perfect. But the last one seems like it has the
-right balance of being reasonable (a single DM to someone who has
-chosen to follow you should be OK) and in theory relatively easy to
-automate. Call this the mass DM approach. In particular, Twitter has a bunch of tools for corporations to do
-customer service [via DM][dm-api] that might be repurposed for this use case.
+None of these are perfect. You might want to use several of them at
+the same time. But let's discuss the last two in some detail.
 
-## The mass DM approach
+## The Mass DM Approach
+The concept here is to send a private DM to each of your followers
+with a link (and possibly some incentive) to sign up for a new
+platform, like Substack.
 
-The simplest solution for the mass DM approach might be a command line app that takes as input a Twitter API key and a message to send each user. It gives you a preview of all of your followers, gives you some options to rank them by importance, and lets you try it out by sending test messages to a few accounts before opening it up to message 1000 accounts per day. It stores state so you know who you messaged in the past, such that you don't inadvertently recontact them.
+The simplest way to implement the mass DM approach might be a command
+line app that takes as input a Twitter API key and a message to send
+each user. It would give you a preview of all of your followers,
+addsome options to rank them by importance, and let you try it out by
+sending test messages to a few accounts before opening it up to
+message 1000 accounts per day. It stores state so you know who you
+messaged in the past, such that you don't inadvertently recontact
+them.
 
-You can imagine a fancier local Mac App that puts a nice GUI on top of the command line engine described above. Or an even fancier hosted version with individually attributable conversion links, so you know which usernames converted to which emails. The hosted version would also allow you to keep running the 1000 DMs per day in the background, so it could be a SaaS service.
+You can imagine a fancier local Mac App that puts a nice GUI on top of
+the command line engine described above. Or an even fancier hosted
+version with individually attributable conversion links, so you know
+which usernames converted to which emails. The hosted version would
+also allow you to keep running the 1000 DMs per day in the background,
+so it could be a SaaS service.
 
-# Bounty: $10000 bounty for open source mass DM tool
+## The Affiliate Link Approach
+
+This is a very different approach. The idea here is to make export
+from social networks as organically viral as the original import was.
+
+One way of doing that is to generate an affiliate link for each
+follower, such that the one who refers the most/best users to your
+site each day receives $100 in crypto.
+
+Why "most/best"? Because you want some measure of quality, not just N spam emails.
+Why crypto? Because it's easy to automate small, fast, international payouts.
+
+A major advantage of this approach is that it can generalize to other
+social networks. It's also much harder to shut down than mass DM, and
+it aligns the crowd with you economically.
+
+Here's one possible flow, in which all emails are recorded at a single
+site that tracks everything and then re-exported into Substack, Ghost,
+Locals, Mailchimp, or other applications. Note that this will work for
+_free_ email lists, but the upsell to paid subscriptions as per
+Substack would then have to be done separately as this implementation
+doesn't also include a checkout flow.
+
+Feel free to modify this.
+
+### Phase 1: Set up referral URL
+Suppose we define three parties: the developer, the influencer who
+wants to export their followers, and each follower themselves.
+
+- The developer sets up a site at (say) socialexporter.com
+- It says EXPORT YOUR FOLLOWERS
+- An influencer lands on this page and logs in with their Twitter account
+- The influencer gets a public page generated for them at socialexporter.com/username
+- The influencer can admin this page at socialexporter.com/username/settings
+- This public page has some copy asking a user to sign up and explaining where their email will be used (eg Substack, Mailchimp, etc)
+- It also has a small form where a follower can enter their email address
+- After this email address is entered, a second small form is displayed where a follower can optionally generate an affiliate URL (more on that below)
+- And a link appears to socialexporter.com/username/leaderboard, which shows a leaderboard of which followers referred which emails (all zero at the start)
+- Separately, when logged in, the influencer sees a different private page with all their followers (kind of like [Social Blade][social-blade-jack])
+- The private page also has a Bitcoin address to deposit funds
+- The influencer sends (say) $1000 to that address to fill up the referral budget
+- And the influencer sets a daily budget of (say) $100 for payouts, and can edit the copy on the private page
+
+At this point the influencer has written copy encouraging users to
+sign up with their email, as well as allocated a budget to incentivize
+this action.
+
+### Phase 2: Post referral URL
+
+Now the influencer incentivizes their audience to refer people.
+
+- The influencer tweets out socialexporter.com/username along with a message
+- "Hey, I'm setting up my mailing list. You can sign up here and get paid to refer others: socialexporter.com/username"
+- A Twitter user sees this tweet and visits socialexporter.com/username
+- At first they just see copy encouraging them to sign up to the `username` email list and where it will be used (eg Substack, Mailchimp, etc)
+- After they enter their email, they then see a second small form where they can optionally generate an affiliate URL
+- The site may require them to be a follower of `twitter.com/username` for this affiliate link to work, not just a random user
+- It's a bit.ly-like URL generator where they can type in their Twitter username to generate an affiliate link
+- So a follower named `foobar` would get an affiliate URL like `socialexporter.com/username?referer=foobar`
+- A user who landed on the site through this affiliate URL and then entered in a quality email would give `foobar` credit on the socialexporter.com leaderboard
+- Anyone can view this leaderboard at socialexporter.com/username/leaderboard to see themselves alongside the top referers for the day for this username, ranked by the number of quality emails they've referred, similar to [pioneer.app](https://pioneer.app/leaderboard#global)
+- Quality can be determined by something like [kickbox.com][] or something more sophisticated, to filter out fake signups
+
+### Phase 3: Payment
+Every 24 hours, the socialexporter.com site issues payments to the top referers.
+
+- First, all emails are analyzed for quality using a tool like [kickbox.com][] or more sophisticated custom code
+- You might require an email validation, for example, or similar criteria to consider an email to be "high quality"
+- Once you have the number of quality emails referred by each user over the last 24 hours, payouts are calculated
+- In one model, 50% of the payouts are proportional and 50% are a prize to the best referrer
+- So if there were three referers who referred 30, 20, and 10 quality emails respectively, along with a daily prize of $100, the first referer would get $50 + (30/60)($50), the second would get (20/60)($50), and the third would get (10/60)($50).
+- These payouts would be sent to the Bitcoin addresses on file every 24 hours
+- If transaction fees are too high, payments can be batched, sent via an off-chain method like Coinbase, or sent via another cryptocurrency
+- In this fashion one can make fast, international, automated, small payments to users for decentralized work
+
+### Phase 4: Tokenization
+
+Note that the affiliate link approach, unlike the mass DM approach,
+is more general (as it works across social networks) and doesn't make
+use of the Twitter API. However, it does cost some money to operate. A
+variation of this method would allow the influencer to compensate
+users in a new cryptocurrency issued for the purpose (such as Reuben's
+Bramanathan's [personal token][]).
+
+Note that this whole user story is just a sketch of an incentivized
+social referral model for viral export. It can be modified in many
+ways.
+
+# Bounty: $10000 bounty for open source Twitter export tool
 
 Here is a [thread][first-thread] with context on the initial $1000 bounty by @balajis.
 
 ![image](https://user-images.githubusercontent.com/10866/84595515-26623680-ae0d-11ea-8fd0-3930db5094e1.png)
 ![image](https://user-images.githubusercontent.com/10866/84595535-3da12400-ae0d-11ea-8f48-89362447ac52.png)
 
-## Bounty Commits
-Enough other people were interested in this that the total bounty funds are now >$10000 as of Sunday June 14, 2020! 
+## Bounty Scoring
 
-If more money comes in beyond $10,000, we will allocate the first $10,000 to the winner. We'll then allocate remaining monies to folks who test out the app and/or possibly to second and third place submissions.
+As noted above, we are thinking about scoring the different approaches
+by allowing volunteer accounts to try out the top submissions on a
+subset of 1000 followers, and then rating them by conversion
+percentage, cost-per-conversion, ease-of-use, and
+happiness-of-converted-user.
+
+Let's define these terms.
+
+ - conversion percentage: out of N followers, the percentage that submit their emails (eg 10%)
+ - cost-per-conversion: the amount of money paid to convert emails divided by the total number of emails collected by the end of the campaign
+ - ease-of-use: self-reported subjective measure by the influencer who set up the product
+ - happiness-of-converted-users: self-reported subjective measure by the users referred to the product
+
+We're open to feedback on this scoring system, but it appears to
+capture the spirit of "export Twitter followers to email" without
+being prescriptive on the exact method.
+
+## Bounty Commits
+Enough other people were interested in this that the total bounty
+funds are now >$10000 as of Monday June 15, 2020.
+
+As more money comes in beyond $10,000, we will allocate the first
+$10,000 to the winner. We'll then allocate remaining monies to folks
+who test out the app and/or possibly to second and third place
+submissions.
 
 - [$1000 from @balajis](https://twitter.com/balajis/status/1271945241881268224)
 - [$1000 from @ameensol](https://twitter.com/SpankChain/status/1271949898548514816)
@@ -115,13 +264,13 @@ If more money comes in beyond $10,000, we will allocate the first $10,000 to the
 - $1000 from anon1
 - $1000 from anon2
 - $500 from anon3
-- $500 from anon4
+- $1000 from anon4
 - $1000 from anon5
 
 ## Bounty Logistics
 
 In terms of mechanics, I (@balajis) will decide on the winner by June
-21, 2020, and then the BTC address of the winner will be provided to
+28, 2020, and then the BTC address of the winner will be provided to
 the various people who have publicly supported the bounty.
 
 It will be incumbent upon each of these people to pay what they have
@@ -142,7 +291,10 @@ consent_ to contact them on another platform, and without bothering
 them very much or at all, or requiring too much time or money on the part
 of the influencer.
 
-If you can achieve this goal another way, that's fine.
+If you can achieve this goal another way besides the mass DM or
+affiliate link approach, that's fine. We'll score them as per the
+[bounty scoring](#bounty-scoring) section by running them on a subset
+of followers.
 
 ## What about Twitter API and DM limits?
 These are a critical constraint. If you have a solution that works in theory, but that
@@ -171,7 +323,7 @@ followers.
 
 The [DM API][dm-api] for customer service seems like it might be quite relevant.
 
-## Can the tool be command line only?
+## If I do the mass DM approach, can it be command line only?
 That's the simplest version, but ideally there should be a simple Mac
 app and a hosted version as well.
 
@@ -242,3 +394,8 @@ a large percentage of follower emails from Twitter and other social networks, wi
 [Buffer]: https://buffer.com/press/buffer-expands-brand-building
 [cave-and-commons]: https://hbr.org/2013/03/give-workers-the-power-to-choose-cave
 [dm-limits]: https://developer.twitter.com/en/docs/basics/rate-limits
+[10kbounty]: https://twitter.com/balajis/status/1272199847324471298
+[social-blade-jack]: https://socialblade.com/twitter/user/jack
+[keybase-proof]: https://book.keybase.io/guides/proof-integration-guide
+[personal token]: https://medium.com/@bramanathan/what-i-learned-from-tokenizing-myself-bb222da07906
+[kickbox.com]: https://kickbox.com/
