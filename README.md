@@ -216,10 +216,14 @@ ways.
 
 # Bounty: $10000 bounty for open source Twitter export tool
 
-Here is a [thread][first-thread] with context on the initial $1000 bounty by @balajis.
+Here are threads with context on the bounty:
 
-![image](https://user-images.githubusercontent.com/10866/84595515-26623680-ae0d-11ea-8fd0-3930db5094e1.png)
-![image](https://user-images.githubusercontent.com/10866/84595535-3da12400-ae0d-11ea-8f48-89362447ac52.png)
+- [Initial thread][initial-thread]
+- [First followup][followup1], with increased bounty
+- [Second followup][followup2], with affiliate link approach
+- [Third followup][followup3], with updated writeup and scoring method
+
+Please follow [@balajis][] for future updates.
 
 ## Bounty Scoring
 
@@ -383,7 +387,7 @@ a large percentage of follower emails from Twitter and other social networks, wi
 [twitter-export]: https://help.twitter.com/en/managing-your-account/how-to-download-your-twitter-archive
 [bounty]: https://twitter.com/balajis/status/1271945241881268224
 [mention]: https://help.twitter.com/en/using-twitter/mentions-and-replies
-[first-thread]: https://twitter.com/balajis/status/1271945241881268224
+[initial-thread]: https://twitter.com/balajis/status/1271945241881268224
 [issue]: https://github.com/balajis/twitter-export/issues/1
 [bounty-increase]: https://twitter.com/balajis/status/1271975948846415872
 [get_followers_bios.py]: https://gist.github.com/raulgarreta/64b4daaf5295b5a95dd09718ac7512f7
@@ -399,3 +403,7 @@ a large percentage of follower emails from Twitter and other social networks, wi
 [keybase-proof]: https://book.keybase.io/guides/proof-integration-guide
 [personal token]: https://medium.com/@bramanathan/what-i-learned-from-tokenizing-myself-bb222da07906
 [kickbox.com]: https://kickbox.com/
+[@balajis]: https://twitter.com/balajis
+[followup1]: https://twitter.com/balajis/status/1272199847324471298
+[followup2]: https://twitter.com/balajis/status/1272431222485106688
+[followup3]: https://twitter.com/balajis
