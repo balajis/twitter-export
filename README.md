@@ -241,8 +241,8 @@ Let's define these terms.
 
  - conversion percentage: out of N followers, the percentage that submit their emails (eg 10%)
  - cost-per-conversion: the amount of money paid to convert emails divided by the total number of emails collected by the end of the campaign
- - ease-of-use: self-reported subjective measure by the influencer who set up the product
- - happiness-of-converted-users: self-reported subjective measure by the users referred to the product
+ - ease-of-use: self-reported subjective measure by the influencer who set up the campaign
+ - happiness-of-converted-users: self-reported subjective measure by the users who were pinged to submit their emails
 
 Assume that the only emails that count are those that are above a
 quality bar, as measured by [kickbox.com][] or a similar set of
